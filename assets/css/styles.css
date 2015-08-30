@@ -21,17 +21,24 @@ header {
     left: 0;
     right: 0;
 
-    height: 40px;
+    height: 64px;
     z-index: 100;
 
-    background-color: #282b2c;
+    background-image: url("../Design-images/film-roll-logo.png");
     padding: 20px 40px;
     color: #fff;
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
 }
 
+#motto {
+    display: inline;
+    float: right;
+    font-family: cursive;
+    color: red;
+}
+
 header a {
-    color: #ffffff;
+    color: red;
     text-decoration: none;
 }
 
