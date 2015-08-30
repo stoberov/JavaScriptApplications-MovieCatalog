@@ -257,7 +257,7 @@ $(function () {
     function renderFilterResults(filters, products) {
 
         // This array contains all the possible filter criteria.
-        var criteria = ['manufacturer', 'storage', 'os', 'camera'],
+        var criteria = ['country', 'year', 'genre', 'duration'],
             results = [],
             isFiltered = false;
 
