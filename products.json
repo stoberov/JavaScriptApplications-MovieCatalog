@@ -1,138 +1,138 @@
 [
   {
     "id": 1,
-    "name": "Sony Xperia Z3",
-    "price": 899,
+    "title": "The Ring",
+    "price": 3,
     "specs": {
-      "manufacturer": "Sony",
-      "storage": 16,
-      "os": "Android",
-      "camera": 15
+      "country": "USA",
+      "year": 2002,
+      "genre": "Horror",
+      "duration": 115
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "A journalist must investigate a mysterious videotape which seems to cause the death of anyone in a week of viewing it.",
     "rating": 4,
     "image": {
-      "small": "assets/images/sony-xperia-z3.jpg",
-      "large": "assets/images/sony-xperia-z3-large.jpg"
+      "small": "assets/images/the-ring-small.jpg",
+      "large": "assets/images/the-ring-large.jpg"
     }
   },
   {
     "id": 2,
-    "name": "Iphone 6",
-    "price": 899,
+    "title": "Star Wars: Episode I - The Phantom Menace",
+    "price": 4,
     "specs": {
-      "manufacturer": "Apple",
-      "storage": 16,
-      "os": "iOS",
-      "camera": 8
+      "country": "USA",
+      "year": 1999,
+      "genre": "Adventure",
+      "duration": 136
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.",
+    "rating": 5,
     "image": {
-      "small": "assets/images/iphone6.jpg",
-      "large": "assets/images/iphone6-large.jpg"
+      "small": "assets/images/star-wars-phantom-menace-small.jpg",
+      "large": "assets/images/star-wars-phantom-menace-large.jpg"
     }
   },
   {
     "id": 3,
-    "name": "HTC One M8",
-    "price": 899,
+    "title": "Hackers",
+    "price": 2,
     "specs": {
-      "manufacturer": "HTC",
-      "storage": 32,
-      "os": "Android",
-      "camera": 5
+      "country": "USA",
+      "year": 1995,
+      "genre": "Crime",
+      "duration": 107
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "A young boy is arrested by the U.S. Secret Service for writing a computer virus and is banned from using a computer until his 18th birthday. Years later, he and his new-found friends discover a plot to unleash a dangerous computer virus, but they must use their computer skills to find the evidence while being pursued by the Secret Service and the evil computer genius behind the virus.",
+    "rating": 3,
     "image": {
-      "small": "assets/images/htc-one.jpg",
-      "large": "assets/images/htc-one-large.jpg"
+      "small": "assets/images/hackers-small.jpg",
+      "large": "assets/images/hackers-large.jpg"
     }
   },
   {
     "id": 4,
-    "name": "Galaxy Alpha",
-    "price": 899,
+    "title": "Fast & Furious",
+    "price": 3,
     "specs": {
-      "manufacturer": "Samsung",
-      "storage": 32,
-      "os": "Android",
-      "camera": 12
+      "country": "USA",
+      "year": 2001,
+      "genre": "Action",
+      "duration": 106
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "Los Angeles police officer Brian O'Connor must decide where his loyalties really lie when he becomes enamored with the street racing world he has been sent undercover to destroy.",
+    "rating": 5,
     "image": {
-      "small": "assets/images/galaxy-alpha.jpg",
-      "large": "assets/images/galaxy-alpha-large.jpg"
+      "small": "assets/images/fast-and-furious-small.jpg",
+      "large": "assets/images/fast-and-furious-large.jpg"
     }
   },
   {
     "id": 5,
-    "name": "Nokia Lumia",
-    "price": 450,
+    "title": "The Dictator",
+    "price": 5,
     "specs": {
-      "manufacturer": "Nokia",
-      "storage": 16,
-      "os": "Windows",
-      "camera": 5
+      "country": "USA",
+      "year": 2012,
+      "genre": "Comedy",
+      "duration": 85
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "The heroic story of a dictator who risks his life to ensure that democracy would never come to the country he so lovingly oppressed.",
+    "rating": 5,
     "image": {
-      "small": "assets/images/nokia-lumia.jpg",
-      "large": "assets/images/nokia-lumia-large.jpg"
+      "small": "assets/images/the-dictator-small.jpg",
+      "large": "assets/images/the-dictator-large.jpg"
     }
   },
   {
     "id": 6,
-    "name": "Zte Nubia",
-    "price": 399,
+    "title": "Terminator",
+    "price": 7,
     "specs": {
-      "manufacturer": "ZTE",
-      "storage": 32,
-      "os": "Android",
-      "camera": 12
+      "country": "USA",
+      "year": 1984,
+      "genre": "Action",
+      "duration": 110
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.",
+    "rating": 5,
     "image": {
-      "small": "assets/images/zte-nubia.jpg",
-      "large": "assets/images/zte-nubia-large.jpg"
+      "small": "assets/images/terminator-small.jpg",
+      "large": "assets/images/terminator-large.jpg"
     }
   },
   {
     "id": 7,
-    "name": "Samsung Galaxy S5",
-    "price": 399,
+    "title": "Jurassic Park",
+    "price": 6,
     "specs": {
-      "manufacturer": "Samsung",
-      "storage": 16,
-      "os": "Android",
-      "camera": 15
+      "country": "USA",
+      "year": 1993,
+      "genre": "Sci-Fi",
+      "duration": 127
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
+    "rating": 2,
     "image": {
-      "small": "assets/images/galaxy-s5.jpg",
-      "large": "assets/images/galaxy-s5-large.jpg"
+      "small": "assets/images/jurassic-park-small.jpg",
+      "large": "assets/images/jurassic-park-large.jpg"
     }
   },
   {
     "id": 8,
-    "name": "Iphone 5S",
-    "price": 399,
+    "title": "South Park: Bigger, Longer and Uncut",
+    "price": 8,
     "specs": {
-      "manufacturer": "Apple",
-      "storage": 16,
-      "os": "iOS",
-      "camera": 8
+      "country": "USA",
+      "year": 1999,
+      "genre": "Animation",
+      "duration": 81
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
-    "rating": 4,
+    "description": "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+    "rating": 5,
     "image": {
-      "small": "assets/images/iphone5s.jpg",
-      "large": "assets/images/iphone5s-large.jpg"
+      "small": "assets/images/south-park-small.jpg",
+      "large": "assets/images/south-park-large.jpg"
     }
   }
 ]
