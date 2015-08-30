@@ -9,7 +9,7 @@
       "genre": "Horror",
       "duration": 115
     },
-    "description": "A journalist must investigate a mysterious videotape which seems to cause the death of anyone in a week of viewing it.",
+    "summary": "A journalist must investigate a mysterious videotape which seems to cause the death of anyone in a week of viewing it.",
     "rating": 4,
     "image": {
       "small": "assets/images/the-ring-small.jpg",
@@ -26,7 +26,7 @@
       "genre": "Adventure",
       "duration": 136
     },
-    "description": "Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.",
+    "summary": "Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.",
     "rating": 5,
     "image": {
       "small": "assets/images/star-wars-phantom-menace-small.jpg",
@@ -43,7 +43,7 @@
       "genre": "Crime",
       "duration": 107
     },
-    "description": "A young boy is arrested by the U.S. Secret Service for writing a computer virus and is banned from using a computer until his 18th birthday. Years later, he and his new-found friends discover a plot to unleash a dangerous computer virus, but they must use their computer skills to find the evidence while being pursued by the Secret Service and the evil computer genius behind the virus.",
+    "summary": "A young boy is arrested by the U.S. Secret Service for writing a computer virus and is banned from using a computer until his 18th birthday. Years later, he and his new-found friends discover a plot to unleash a dangerous computer virus, but they must use their computer skills to find the evidence while being pursued by the Secret Service and the evil computer genius behind the virus.",
     "rating": 3,
     "image": {
       "small": "assets/images/hackers-small.jpg",
@@ -60,7 +60,7 @@
       "genre": "Action",
       "duration": 106
     },
-    "description": "Los Angeles police officer Brian O'Connor must decide where his loyalties really lie when he becomes enamored with the street racing world he has been sent undercover to destroy.",
+    "summary": "Los Angeles police officer Brian O'Connor must decide where his loyalties really lie when he becomes enamored with the street racing world he has been sent undercover to destroy.",
     "rating": 5,
     "image": {
       "small": "assets/images/fast-and-furious-small.jpg",
@@ -77,7 +77,7 @@
       "genre": "Comedy",
       "duration": 85
     },
-    "description": "The heroic story of a dictator who risks his life to ensure that democracy would never come to the country he so lovingly oppressed.",
+    "summary": "The heroic story of a dictator who risks his life to ensure that democracy would never come to the country he so lovingly oppressed.",
     "rating": 5,
     "image": {
       "small": "assets/images/the-dictator-small.jpg",
@@ -94,7 +94,7 @@
       "genre": "Action",
       "duration": 110
     },
-    "description": "A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.",
+    "summary": "A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.",
     "rating": 5,
     "image": {
       "small": "assets/images/terminator-small.jpg",
@@ -111,7 +111,7 @@
       "genre": "Sci-Fi",
       "duration": 127
     },
-    "description": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
+    "summary": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
     "rating": 2,
     "image": {
       "small": "assets/images/jurassic-park-small.jpg",
@@ -128,7 +128,7 @@
       "genre": "Animation",
       "duration": 81
     },
-    "description": "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+    "summary": "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
     "rating": 5,
     "image": {
       "small": "assets/images/south-park-small.jpg",
