@@ -17,15 +17,15 @@
 
 <header class="compact">
     <h1><a href="#">The White Lady®</a></h1>
-    <span id="motto">"Feel the Horror in your Home"</span>
+    <span class="hidden-xs" id="motto">"Feel the Horror in your Home"</span>
     <h4>MOVIE RENTAL</h4>
 </header>
 
-<div class="main-content">
+<div class="container-fluid main-content">
 
-    <div class="all-products page">
+    <div class="row all-products page">
 
-        <div class="filters">
+        <div class="col-md-2 col-sm-3 filters">
             <form>
 
                 <div class="filter-criteria">
@@ -63,7 +63,9 @@
 
         </div>
 
-        <ul class="products-list">
+
+        <div class="col-md-10 col-sm-9">
+        <ul class="row products-list">
             <script id="products-template" type="x-handlebars-template">​
             {{#each this}}
             <li data-index="{{id}}">
@@ -85,6 +87,7 @@
             </script>
              
         </ul>
+        </div>
 
     </div>
 
