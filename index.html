@@ -41,8 +41,18 @@
 </script>
 
 <header class="compact">
-    <h1><a href="#">The White Lady®</a></h1>
+    <span id="motto">"Feel the Horror in your Home"</span>
     <span class="hidden-xs" id="motto">"Feel the Horror in your Home"</span>
+	<h1><a href="#">The White Lady<sup>®</sup></a></h1>
+	
+	<form id="log">
+		<span>User name: </span>
+		<input type="text" id="username" name="username" value=""> 
+		<span>Password: </span>
+		<input type="password" id="password" name="password" value="">
+		
+	</form>
+	<button id="logButton">Log In</button>
     <h4>MOVIE RENTAL</h4>
 </header>
 
@@ -94,7 +104,7 @@
             <script id="products-template" type="x-handlebars-template">​
             {{#each this}}
             <li data-index="{{id}}">
-                <a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{title}}"/></a>
+                <a href="#" class="product-photo"><img src="{{image.small}}"  alt="{{title}}"/></a>
 
                 <h2><a href="#"> {{title}} </a></h2>
                 <ul class="product-description">
@@ -141,8 +151,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="bower_components/everlive/src/everlive.all.js"></script>
 <script src="assets/js/script.js"></script>
-
+<script src="assets/js/login.js"></script>
 
 </body>
 </html>
