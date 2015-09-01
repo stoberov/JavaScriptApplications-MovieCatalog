@@ -6,6 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:url" content="http://localhost/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Movie Rental - The White Lady" />
+    <meta property="og:description" content="Rent movies for cheap" />
+    <meta property="og:image" content="" />
+
     <title>Single Page App Without A Framework</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
@@ -14,6 +20,25 @@
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '996670937051141',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <header class="compact">
     <h1><a href="#">The White Lady®</a></h1>
@@ -80,12 +105,9 @@
                 </ul>
                 <button>Buy Now!</button>
                 <p class="product-price">{{price}}$</p>
-
-                <div class="highlight"></div>
             </li>
             {{/each}}
             </script>
-             
         </ul>
         </div>
 
@@ -101,6 +123,8 @@
             <img src=""/>
 
             <p></p>
+
+            <div class="fb-share-button" data-href="" data-layout="button"></div>
 
             <span class="close">×</span>
         </div>

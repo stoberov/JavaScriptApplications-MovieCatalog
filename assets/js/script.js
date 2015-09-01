@@ -1,26 +1,26 @@
-$(function () {
+$(function() {
 
     // Globals variables
 
-    // 	An array containing objects with information about the products.
+    //  An array containing objects with information about the products.
     var products = [],
 
-    // Our filters object will contain an array of values for each filter
+        // Our filters object will contain an array of values for each filter
 
-    // Example:
-    // filters = {
-    // 		"manufacturer" = ["Apple","Sony"],
-    //		"storage" = [16]
-    //	}
+        // Example:
+        // filters = {
+        //      "manufacturer" = ["Apple","Sony"],
+        //      "storage" = [16]
+        //  }
         filters = {};
 
-    //	Event handlers for frontend navigation
+    //  Event handlers for frontend navigation
 
-    //	Checkbox filtering
+    //  Checkbox filtering
 
     var checkboxes = $('.all-products input[type=checkbox]');
 
-    checkboxes.click(function () {
+    checkboxes.click(function() {
 
         var that = $(this),
             specName = that.attr('name');
@@ -33,7 +33,7 @@ $(function () {
                 filters[specName] = [];
             }
 
-            //	Push values into the chosen filter array
+            //  Push values into the chosen filter array
             filters[specName].push(that.val());
 
             // Change the url hash;
@@ -66,7 +66,7 @@ $(function () {
     });
 
     // When the "Clear all filters" button is pressed change the hash to '#' (go to the home page)
-    $('.filters button').click(function (e) {
+    $('.filters button').click(function(e) {
         e.preventDefault();
         window.location.hash = '#';
     });
@@ -75,7 +75,7 @@ $(function () {
 
     var singleProductPage = $('.single-product');
 
-    singleProductPage.on('click', function (e) {
+    singleProductPage.on('click', function(e) {
 
         if (singleProductPage.hasClass('visible')) {
 
@@ -94,7 +94,7 @@ $(function () {
     // These are called on page load
 
     // Get data about our products from products.json.
-    $.getJSON("products.json", function (data) {
+    $.getJSON("products.json", function(data) {
 
         // Write the data into our global variable.
         products = data;
@@ -108,7 +108,7 @@ $(function () {
 
     // An event handler with calls the render function on every hashchange.
     // The render function will show the appropriate content of out page.
-    $(window).on('hashchange', function () {
+    $(window).on('hashchange', function() {
         render(window.location.hash);
     });
 
@@ -125,7 +125,7 @@ $(function () {
         var map = {
 
             // The "Homepage".
-            '': function () {
+            '': function() {
 
                 // Clear the filters object, uncheck all checkboxes, show all the products
                 filters = {};
@@ -135,7 +135,7 @@ $(function () {
             },
 
             // Single Products page.
-            '#product': function () {
+            '#product': function() {
 
                 // Get the index of which product we want to show and call the appropriate function.
                 var index = url.split('#product/')[1].trim();
@@ -144,7 +144,7 @@ $(function () {
             },
 
             // Page with filtered products
-            '#filter': function () {
+            '#filter': function() {
 
                 // Grab the string after the '#filter/' keyword. Call the filtering function.
                 url = url.split('#filter/')[1].trim();
@@ -153,7 +153,7 @@ $(function () {
                 try {
                     filters = JSON.parse(url);
                 }
-                    // If it isn't a valid json, go back to homepage ( the rest of the code won't be executed ).
+                // If it isn't a valid json, go back to homepage ( the rest of the code won't be executed ).
                 catch (err) {
                     window.location.hash = '#';
                     return;
@@ -190,10 +190,10 @@ $(function () {
         // Each products has a data-index attribute.
         // On click change the url hash to open up a preview for this product only.
         // Remember: every hashchange triggers the render function.
-        list.find('li').on('click', function (e) {
+        list.find('li > button').on('click', function(e) {
             e.preventDefault();
 
-            var productIndex = $(this).data('index');
+            var productIndex = $(this).parent().data('index');
 
             window.location.hash = 'product/' + productIndex;
         })
@@ -210,11 +210,11 @@ $(function () {
 
         // Iterate over all of the products.
         // If their ID is somewhere in the data object remove the hidden class to reveal them.
-        allProducts.each(function () {
+        allProducts.each(function() {
 
             var that = $(this);
 
-            data.forEach(function (item) {
+            data.forEach(function(item) {
                 if (that.data('index') == item.id) {
                     that.removeClass('hidden');
                 }
@@ -236,13 +236,20 @@ $(function () {
 
         // Find the wanted product by iterating the data object and searching for the chosen index.
         if (data.length) {
-            data.forEach(function (item) {
+            data.forEach(function(item) {
                 if (item.id == index) {
                     // Populate '.preview-large' with the chosen product's data.
                     container.find('h3').text(item.name);
                     container.find('img').attr('src', item.image.large);
                     container.find('p').text(item.summary);
+
+                    $(".fb-share-button").attr("data-href", 'http://localhost/index.html#product/' + index);
+                    $("meta[property='og:url']").attr("content", 'http://localhost/index.html#product/' + index);
+                    $("meta[property='og:image']").attr("content", item.image.large);
+                    $("meta[property='og:title']").attr("content", 'I"m viewing the movie ' + item.title + ' @ The White Lady');
+                    $("meta[property='og:description']").attr("content", item.summary);
                 }
+
             });
         }
 
@@ -265,7 +272,7 @@ $(function () {
         // We will be checking them again one by one.
         checkboxes.prop('checked', false);
 
-        criteria.forEach(function (c) {
+        criteria.forEach(function(c) {
 
             // Check if each of the possible filter criteria is actually in the filters object.
             if (filters[c] && filters[c].length) {
@@ -283,10 +290,10 @@ $(function () {
                 // and check if they contain the same values (the ones we are filtering by).
 
                 // Iterate over the entries inside filters.criteria (remember each criteria contains an array).
-                filters[c].forEach(function (filter) {
+                filters[c].forEach(function(filter) {
 
                     // Iterate over the products.
-                    products.forEach(function (item) {
+                    products.forEach(function(item) {
 
                         // If the product has the same specification value as the one in the filter
                         // push it inside the results array and mark the isFiltered flag true.
@@ -349,8 +356,7 @@ $(function () {
         if (!$.isEmptyObject(filters)) {
             // Stringify the object via JSON.stringify and write it after the '#filter' keyword.
             window.location.hash = '#filter/' + JSON.stringify(filters);
-        }
-        else {
+        } else {
             // If it's empty change the hash to '#' (the homepage).
             window.location.hash = '#';
         }
