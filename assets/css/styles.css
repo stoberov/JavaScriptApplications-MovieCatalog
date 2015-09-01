@@ -21,13 +21,11 @@ header {
     left: 0;
     right: 0;
 
-    height: 75px;
+    height: 100px;
     z-index: 100;
 
     background-image: url("../Design-images/film-roll-logo.png");
-    background-repeat: repeat-x;
-    background-size: 600px;
-    padding: 22px 40px;
+    padding: 20px 40px;
     color: #fff;
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
 }
@@ -41,18 +39,10 @@ header h4 {
     margin: 0;
 }
 
-#motto {
-    display: inline;
-    float: right;
-    font-family: cursive;
-    color: red;
-}
 
 header form {
-    display: inline-block;
-    position: fixed;
-    top: 68px;
-    right: 6%;
+    display: block;
+    float: right;
     font-weight: bold;
 }
 
@@ -63,24 +53,19 @@ header form input {
 
 header button {
     display: inline-block;
-    position: fixed;
-    top: 68px;
-    right: 2%;
     padding: 0 2px 0;
+}
+
+#motto {
+    display: block;
+    float: right;
+    font-family: cursive;
+    color: red;
 }
 
 header a {
     color: red;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
-
-header h4{
-    margin: 0;
-    padding: 0 0 10px 0;
-    position: fixed;
-    top: 10%;
 }
 
 header h2.tzine {
@@ -104,7 +89,7 @@ header h2.tzine a {
 @media (max-width: 500px) {
 
     header {
-        padding: 20px 20px;
+        padding: 20px 15px;
     }
 
     header h1 {
@@ -255,8 +240,6 @@ header h2.tzine a {
     text-align: center;
     box-shadow: 0 0 20px 8px #f3f3f3 inset;
 
-    width: 200px;
-    height: 80px
     margin-bottom: 25px;
     padding: 20px 0;
     box-sizing: border-box;
@@ -463,4 +446,3 @@ header h2.tzine a {
 .error h3 {
     font-size: 40px;
 }
-
