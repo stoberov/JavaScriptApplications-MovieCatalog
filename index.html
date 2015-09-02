@@ -93,7 +93,7 @@
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            
+
             <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
@@ -122,16 +122,16 @@
                 </div>
 
                 <div class="filter-criteria">
-                    <span>Year</span>
-                    <label><input type="checkbox" value="2000" name="year">after 2000</label>
-                    <label><input type="checkbox" value="2010" name="year">after 2010</label>
+                    <span>Year After</span>
+                    <label><input type="checkbox" value="2000" name="year">2000</label>
+                    <label><input type="checkbox" value="2010" name="year">2010</label>
                 </div>
 
                 <div class="filter-criteria">
-                    <span>Duration</span>
-                    <label><input type="checkbox" value="60" name="duration">> 60 minutes</label>
-                    <label><input type="checkbox" value="90" name="duration">> 90 minutes</label>
-                    <label><input type="checkbox" value="120" name="duration">> 120 minutes</label>
+                    <span>Duration Longer Than</span>
+                    <label><input type="checkbox" value="60" name="duration"> 60 minutes</label>
+                    <label><input type="checkbox" value="90" name="duration"> 90 minutes</label>
+                    <label><input type="checkbox" value="120" name="duration"> 120 minutes</label>
                 </div>
 
                 <button>Clear filters</button>
@@ -152,7 +152,7 @@
                         <li><span>Genre: </span>{{specs.genre}}</li>
                         <li><span>Duration: </span>{{specs.duration}} min</li>
                     </ul>
-                    <button>Buy Now!</button>
+                    <button>Rent Now!</button>
                     <p class="product-price">{{price}}$</p>
                 </li>
                 {{/each}}

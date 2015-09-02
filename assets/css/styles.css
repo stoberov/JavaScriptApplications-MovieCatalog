@@ -102,10 +102,10 @@ header h2.tzine a {
 ------------------*/
 
 .carousel-inner > .item > img,.carousel-inner > .item > a > img {
-    width: 70%;
-    height: 370px;
-    margin: auto;
-
+    width: 57%;
+    height: 260px;
+    margin-top: 49px;
+    margin-left: 238px;
 }
 
 #myCarousel {
@@ -113,8 +113,8 @@ header h2.tzine a {
     height: 400px;
     margin-bottom: 20px;
     margin-top: -20px;
-    background-image: url("../design-images/film-roll-logo.png");
-    background-size: 172%;
+    background-image: url("../design-images/filmstrip.png");
+    background-size: contain;
 }
 
 .main-content {
