@@ -39,21 +39,40 @@ header h4 {
     margin: 0;
 }
 
+header div#logField {
+    margin: 0;
+    padding: 0;
+}
 
-header form {
+header div#logField div#logged {
+    position: fixed;
+    top: 60px;
+    right: 30px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+header div form {
     display: block;
     float: right;
     font-weight: bold;
+    margin-right: 40px;
 }
 
-header form input {
+header div form input {
+    position: relative;
     margin-bottom: 5px;
     width: 80px;
+    color: black;
 }
 
-header button {
+header div button#logButton {
     display: inline-block;
     padding: 0 2px 0;
+    position: absolute;
+    float: right;
+    top: 52px;
+    right: 20px;
 }
 
 #motto {
