@@ -106,7 +106,6 @@ header h2.tzine a {
 }
 
 @media (max-width: 500px) {
-
     header {
         padding: 20px 15px;
     }
@@ -115,12 +114,27 @@ header h2.tzine a {
         font-size: 24px;
         margin: 0;
     }
-
 }
 
 /*-----------------
 	Main Content
 ------------------*/
+
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {
+    width: 70%;
+    height: 370px;
+    margin: auto;
+
+}
+
+#myCarousel {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    background-image: url("../design-images/film-roll-logo.png");
+    background-size: 172%;
+}
 
 .main-content {
     box-sizing: border-box;
