@@ -12,7 +12,7 @@
     <meta property="og:description" content="Rent movies for cheap"/>
     <meta property="og:image" content=""/>
 
-    <title>The White Lady</title>
+    <title>The White Lady Movie Catalog</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -72,11 +72,10 @@
             </ol>
 
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="assets/design-images/film-roll-logo.png" alt="logo" width="460" height="345">
-                </div>
-
                 <script id="my-template" type="x-handlebars-template">​
+                <div class="item active">
+                    <img src="assets/design-images/the-white-lady-logo.png" alt="logo" width="460" height="345">
+                </div>
                 {{#each this}}
                 <div class="item">
                     <img src="{{image.large}}" alt="{{title}}" width="460" height="345"/>
@@ -153,7 +152,7 @@
                         <li><span>Genre: </span>{{specs.genre}}</li>
                         <li><span>Duration: </span>{{specs.duration}} min</li>
                     </ul>
-                    <button>Rent Now!</button>
+                    <button>Details</button>
                     <p class="product-price">{{price}}$</p>
                 </li>
                 {{/each}}
