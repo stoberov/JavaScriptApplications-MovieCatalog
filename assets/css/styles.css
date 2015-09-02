@@ -114,6 +114,26 @@ header h2.tzine a {
     margin-left: 238px;
 }
 
+div#addMovieMenu {
+    display: none;
+    position: fixed;
+    left: 20%;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    background: #ccc;
+    border: 1px solid #000;
+    z-index: 1000;
+}
+
+.blurred {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
 #myCarousel {
     width: 100%;
     height: 400px;
