@@ -39,40 +39,27 @@ header h4 {
     margin: 0;
 }
 
-header div#logField {
-    margin: 0;
-    padding: 0;
-}
-
-header div#logField div#logged {
+header img#logo {
+    width: 25px;
     position: fixed;
-    top: 60px;
-    right: 30px;
-    font-weight: bold;
-    font-family: cursive;
+    top: 15px;
+    left: 10px;
 }
 
-header div form {
+header button#addBtn {
+    position: fixed;
     display: block;
-    float: right;
-    font-weight: bold;
-    margin-right: 40px;
-}
-
-header div form input {
-    position: relative;
-    margin-bottom: 5px;
-    width: 80px;
-    color: black;
-}
-
-header div button#logButton {
-    display: inline-block;
-    padding: 0 2px 0;
-    position: absolute;
-    float: right;
-    top: 52px;
+    border-radius: 25px;
+    top: 45px;
     right: 20px;
+    width: 104px;
+    height: 39px;
+    background: url(../design-images/addButton.png) no-repeat;
+    background-size: 100px 35px;
+}
+
+header img#addBtn:active {
+    background-position:34px 174px;
 }
 
 #motto {
