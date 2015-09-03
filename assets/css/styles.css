@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
 * {
     margin: 0;
     padding: 0;
@@ -114,16 +117,40 @@ header h2.tzine a {
     margin-left: 238px;
 }
 
-div#addMovieMenu {
+div div#addMovieMenu {
     display: none;
     position: fixed;
+    top: 30px;
     left: 20%;
-    width: 800px;
-    height: 500px;
+    height: 620px;
     border-radius: 15px;
     background: #ccc;
     border: 1px solid #000;
     z-index: 1000;
+    padding: 0 100px 0 100px;
+}
+
+div div#addMovieMenu h2 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+div div#addMovieMenu form div label {
+    font-family: 'Lato', sans-serif;
+}
+
+div#buttons {
+    position: absolute;
+    right: 2%;
+}
+
+.disabled-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
 
 .blurred {
