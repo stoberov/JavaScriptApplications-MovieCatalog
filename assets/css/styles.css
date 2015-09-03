@@ -55,10 +55,10 @@ header button#addBtn {
     border-radius: 25px;
     top: 45px;
     right: 20px;
-    width: 104px;
+    width: 115px;
     height: 39px;
     background: url(../design-images/addButton.png) no-repeat;
-    background-size: 100px 35px;
+    background-size: 112px 35px;
 }
 
 header img#addBtn:active {
@@ -121,18 +121,24 @@ div div#addMovieMenu {
     display: none;
     position: fixed;
     top: 30px;
-    left: 20%;
+    left: 250px;
     height: 620px;
     border-radius: 15px;
     background: #ccc;
     border: 1px solid #000;
     z-index: 1000;
-    padding: 0 100px 0 100px;
+    padding: 0 70px 0 70px;
 }
 
 div div#addMovieMenu h2 {
     text-align: center;
     font-family: 'Oswald', sans-serif;
+}
+
+div div#addMovieMenu form {
+    overflow-y: scroll;
+    height: 62%;
+    position: relative;
 }
 
 div div#addMovieMenu form div label {
@@ -141,7 +147,8 @@ div div#addMovieMenu form div label {
 
 div#buttons {
     position: absolute;
-    right: 2%;
+    top: 85%;
+    right: 8%;
 }
 
 .disabled-background {

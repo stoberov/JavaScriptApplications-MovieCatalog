@@ -50,7 +50,7 @@
     <h1><a href="#">The White Lady<sup>®</sup></a></h1>
     <span class="hidden-xs" id="motto">"Feel the Horror in your Home"</span><br>
 
-    <h4>MOVIE LIBRARY</h4>
+    <h4>MOVIE CATALOG</h4>
 
     <div>
         <form id="toggle">
@@ -63,10 +63,10 @@
 </header>
 
 <div class="container-fluid" id="menuContainer">
-    <div class="col-md-8" id="addMovieMenu">
+    <div class="col-md-8 row" id="addMovieMenu">
         <h2>Add a Movie</h2><br/><br/>
 
-        <form class="col-lg-12">
+        <form class="col-md-12">
             <div>
                 <label for="title">Title:</label>
                 <input type="text" class="form-control" id="title" placeholder="Add the title here"/>
@@ -89,15 +89,23 @@
                 <label for="genre">Genre:</label>
                 <input type="text" class="form-control" id="genre" placeholder="Add the genre here"/>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="duration">Duration:</label>
                 <input type="text" class="form-control" id="duration" placeholder="Add the duration here"/>
             </div>
-            <div id="buttons">
-                <button type="button" class="btn btn-primary btn-lg active">ADD</button>
-                <button type="button" class="btn btn-default btn-lg active" id="cancel">Cancel</button>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <input type="text" class="form-control" id="rating" placeholder="Add the rating here"/>
+            </div>
+            <div>
+                <label for="summary">Summary:</label>
+                <textarea rows="4" class="form-control" id="summary"></textarea>
             </div>
         </form>
+        <div id="buttons">
+            <button type="button" class="btn btn-primary btn-lg active" id="add">ADD</button>
+            <button type="button" class="btn btn-default btn-lg active" id="cancel">Cancel</button>
+        </div>
     </div>
 </div>
 
