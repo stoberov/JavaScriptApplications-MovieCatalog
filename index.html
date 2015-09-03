@@ -50,6 +50,13 @@
     <span class="hidden-xs" id="motto">"Feel the Horror in your Home"</span><br>
 
     <h4>MOVIE LIBRARY</h4>
+    <div>
+        <form id="toggle">
+            <button type="button" id="lev" class="btn btn-success">BGN</button>
+            <button type="button" id="dollar" class="btn btn-success">USD</button>
+        </form>
+    </div>
+
     <button id="addBtn"></button>
 </header>
 
@@ -153,7 +160,10 @@
                         <li><span>Duration: </span>{{specs.duration}} min</li>
                     </ul>
                     <button>Details</button>
-                    <p class="product-price">{{price}}$</p>
+                    <p class="product-price">
+                        <span class="currency">$</span>
+                        <span class="price">{{price}}</span>
+                    </p>
                 </li>
                 {{/each}}
                 </script>
@@ -193,5 +203,6 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/js/bootstrap-carousel.js"></script>
 <script src="assets/js/addingMovies.js"></script>
+<script src="assets/js/currencyExchange.js"></script>
 </body>
 </html>
