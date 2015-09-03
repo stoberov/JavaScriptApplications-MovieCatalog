@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Rental Tests</title>
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+</head>
+
+<body>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script src="bower_components/chai/chai.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <div id="mocha"></div>
+    <ul class="row products-list">
+        <script id="products-template" type="x-handlebars-template">​ {{#each this}}
+            <li data-index="{{id}}">
+                <a href="#" class="product-photo"><img src="{{image.small}}" alt="{{title}}" /></a>
+                <h2><a href="#"> {{title}} </a></h2>
+                <ul class="product-description">
+                    <li><span>Country: </span>{{specs.country}}</li>
+                    <li><span>Year: </span>{{specs.year}}</li>
+                    <li><span>Genre: </span>{{specs.genre}}</li>
+                    <li><span>Duration: </span>{{specs.duration}} min</li>
+                </ul>
+                <button>Details</button>
+                <p class="product-price">
+                    <span class="currency">$</span>
+                    <span class="price">{{price}}</span>
+                </p>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+    <script>
+    mocha.setup('bdd');
+    expect = chai.expect;
+
+    describe('#generateAllProductsHTML', function() {
+    	afterEach(function() {
+    		$('.products-list').hide();
+    	});
+
+        it('expect to return 0, when there are movies', function() {
+            var products = [];
+
+            navigation.generateAllProductsHTML(products);
+            var itemsLength = $('.products-list').children('li').length;
+            expect(itemsLength).to.equal(0);
+        });
+        it('expect to return 2, when there are 2 movies', function() {
+            var products = [{
+                "id": 1,
+                "title": "The Ring",
+                "price": 3,
+                "specs": {
+                    "country": "USA",
+                    "year": 2002,
+                    "genre": "Horror",
+                    "duration": 115
+                },
+                "summary": "A journalist must investigate a mysterious videotape which seems to cause the death of anyone in a week of viewing it.",
+                "rating": 4,
+                "image": {
+                    "small": "assets/images/the-ring-small.jpg",
+                    "large": "assets/images/the-ring-large.jpg"
+                }
+            }, {
+                "id": 2,
+                "title": "Star Wars: Episode I - The Phantom Menace",
+                "price": 4,
+                "specs": {
+                    "country": "USA",
+                    "year": 1999,
+                    "genre": "Adventure",
+                    "duration": 136
+                },
+                "summary": "Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.",
+                "rating": 5,
+                "image": {
+                    "small": "assets/images/star-wars-phantom-menace-small.jpg",
+                    "large": "assets/images/star-wars-phantom-menace-large.jpg"
+                }
+            }];
+
+            navigation.generateAllProductsHTML(products);
+            var itemsLength = $('.products-list').children('li').length;
+            expect(itemsLength).to.equal(2);
+        });
+    });
+    </script>
+    <script>
+    mocha.run();
+    </script>
+</body>
+
+</html>
