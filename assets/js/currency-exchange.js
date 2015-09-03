@@ -34,6 +34,8 @@
 
                     if (selectedCurrency == 'dollar') {
                         $('.currency').text('$');
+                        newPrice = (currentPrice.text() / result.rate).toFixed(2);
+                        currentPrice.text(newPrice);
                     } else {
                         $('.currency').text('BGN');
                         newPrice = (currentPrice.text() * result.rate).toFixed(2);
