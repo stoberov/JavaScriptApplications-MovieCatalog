@@ -1,5 +1,5 @@
 (function () {
-    (document).ready(function () {
+    $(document).ready(function () {
         $('#dollar, #lev').on('click', function () {
             setCurrencySystem(this.id);
             updateCurrency();
