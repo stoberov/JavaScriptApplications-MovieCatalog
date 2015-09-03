@@ -1,6 +1,4 @@
 $(window).load(function() {
-    var jsonfile = require(['bower_components/jsonfile/index.js']);
-
 
     var $body = $('body');
     var $container = $('.main-content');
@@ -46,24 +44,17 @@ $(window).load(function() {
                     .then(function (products) {
                         var newMovie = products.result[0];
                         //console.log(JSON.stringify(newMovie));
-                        var file = 'products.json';
-
-                        jsonfile.writeFile(file, newMovie, function (err) {
-                            console.error(err)
-                        })
-                        //$.getJSON('products.json', function (data) {
-                        //    var updatedProducts = data.push(newMovie);
-                        //    sessionStorage.setItem('products', JSON.stringify(newMovie));
-                        //    var retrievedData = sessionStorage.getItem("products");
-                        //    console.log(retrievedData);
+                        //var file = 'products.json';
                         //
-                        //    //var retrievedData = sessionStorage.getItem("products");
-                        //    //var obj = $.parseJSON(retrievedData);
-                        //    //for(var i=1; i < obj.length; i+=1) {
-                        //    //    console.log(obj[i]);
-                        //    //};
-                        //
-                        //});
+                        //jsonfile.writeFile(file, newMovie, function (err) {
+                        //    console.error(err)
+                        //})
+                        $.getJSON('products.json', function (data) {
+                            var updatedProducts = data.push(newMovie);
+                            sessionStorage.setItem('products', JSON.stringify(newMovie));
+                            var retrievedData = sessionStorage.getItem("products");
+                            console.log(retrievedData);
+                        });
                     })
                     .then(function () {
                         $('#addMovieMenu').hide('clip');
