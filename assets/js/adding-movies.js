@@ -1,4 +1,6 @@
 $(window).load(function() {
+    var jsonfile = require(['bower_components/jsonfile/index.js']);
+
 
     var $body = $('body');
     var $container = $('.main-content');
@@ -17,23 +19,23 @@ $(window).load(function() {
     });
 
     $('#add').on('click', function () {
-        var $title = $('#title').val();
-        var $price = $('#price').val();
-        var $country = $('#country').val();
-        var $year = $('#year').val();
-        var $genre = $('#genre').val();
-        var $duration = $('#duration').val();
-        var $summary= $('#summary').val();
-        var $rating = $('#rating').val();
+        var title = $('#title').val();
+        var price = $('#price').val();
+        var country = $('#country').val();
+        var year = $('#year').val();
+        var genre = $('#genre').val();
+        var duration = $('#duration').val();
+        var summary= $('#summary').val();
+        var rating = $('#rating').val();
 
         var el = new Everlive('iCUPUElKASGpeqyh');
         var productsData = el.data('Products');
         var product = {
-            'Title': $title,
-            'Price': $price,
-            'Specs': {'Country': $country, 'Year': $year, 'Genre': $genre, 'Duration': $duration},
-            'Summary': $summary,
-            'Rating': $rating
+            'Title': title,
+            'Price': price,
+            'Specs': {'Country': country, 'Year': year, 'Genre': genre, 'Duration': duration},
+            'Summary': summary,
+            'Rating': rating
         };
         productsData.create(product)
             .then(function (data) {
@@ -43,11 +45,25 @@ $(window).load(function() {
                 productsData.get(query)
                     .then(function (products) {
                         var newMovie = products.result[0];
-                        console.log(JSON.stringify(newMovie));
-                        $.getJSON('products.json', function (data) {
+                        //console.log(JSON.stringify(newMovie));
+                        var file = 'products.json';
 
-                            data.push(newMovie);
-                        });
+                        jsonfile.writeFile(file, newMovie, function (err) {
+                            console.error(err)
+                        })
+                        //$.getJSON('products.json', function (data) {
+                        //    var updatedProducts = data.push(newMovie);
+                        //    sessionStorage.setItem('products', JSON.stringify(newMovie));
+                        //    var retrievedData = sessionStorage.getItem("products");
+                        //    console.log(retrievedData);
+                        //
+                        //    //var retrievedData = sessionStorage.getItem("products");
+                        //    //var obj = $.parseJSON(retrievedData);
+                        //    //for(var i=1; i < obj.length; i+=1) {
+                        //    //    console.log(obj[i]);
+                        //    //};
+                        //
+                        //});
                     })
                     .then(function () {
                         $('#addMovieMenu').hide('clip');
@@ -55,8 +71,5 @@ $(window).load(function() {
                         $wrapper.removeClass('disabled-background');
                     })
             });
-        //function(error){
-        //    alert(JSON.stringify(error));
-        //});
     });
 });
