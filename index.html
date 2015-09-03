@@ -14,7 +14,6 @@
 
     <title>The White Lady</title>
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="assets/css/styles.css" rel="stylesheet">
 </head>
@@ -57,6 +56,12 @@
     <button id="logButton">Log In</button>
     </div>
     <h4>MOVIE RENTAL</h4>
+    <div>
+        <form id="toggle">
+            <button type="button" id="lev" class="btn btn-success">BGN</button>
+            <button type="button" id="dollar" class="btn btn-success">USD</button>
+        </form>
+    </div>
 </header>
 
 <div class="container-fluid main-content">
@@ -159,7 +164,10 @@
                         <li><span>Duration: </span>{{specs.duration}} min</li>
                     </ul>
                     <button>Rent Now!</button>
-                    <p class="product-price">{{price}}$</p>
+                    <p class="product-price">
+                        <span class="currency">$</span>
+                        <span class="price"> {{price}}</span>
+                    </p>
                 </li>
                 {{/each}}
                 </script>
@@ -198,5 +206,6 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/js/login.js"></script>
 <script src="assets/js/bootstrap-carousel.js"></script>
+<script src="assets/js/currencyExchange.js"></script>
 </body>
 </html>
