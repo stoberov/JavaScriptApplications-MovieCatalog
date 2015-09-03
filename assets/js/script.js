@@ -319,13 +319,12 @@ $(function() {
                             }
                         }
 
-                        if (c == 'year') {
+                        if (c == 'year'){
                             if (item.specs[c] > filter) {
                                 results.push(item);
                                 isFiltered = true;
                             }
                         }
-
                     });
 
                     // Here we can make the checkboxes representing the filters true,

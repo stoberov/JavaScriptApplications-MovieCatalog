@@ -252,6 +252,17 @@ div#buttons {
     margin-top: 10px;
 }
 
+#year-box{
+    display: inline-block;
+    width: 35px;
+}
+
+#slider-year{
+    display: inline-block;
+    border: none;
+    width: 40px
+}
+
 /*	Products List	*/
 
 .all-products h3 {

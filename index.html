@@ -16,6 +16,7 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/jquery-ui-1.11.4/jquery-ui.css"/>
 </head>
@@ -170,8 +171,10 @@
 
                 <div class="filter-criteria">
                     <span>Year After</span>
-                    <label><input type="checkbox" value="2000" name="year">2000</label>
-                    <label><input type="checkbox" value="2010" name="year">2010</label>
+                    <input type="checkbox" class="year" id="year-box" name="year" value="2000">
+                    <input type="text" class="year" id="slider-year" value="2000" readonly>
+
+                    <div id="slider" style="width: 170px"></div>
                 </div>
 
                 <div class="filter-criteria">
@@ -240,10 +243,11 @@
 <script src="bower_components/handlebars/handlebars.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/everlive/src/everlive.all.js"></script>
-<script src="bower_components/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/bootstrap-carousel.js"></script>
 <script src="assets/js/addingMovies.js"></script>
 <script src="assets/js/currencyExchange.js"></script>
+<script src="assets/js/filtering-year-slider.js"></script>
 </body>
 </html>
