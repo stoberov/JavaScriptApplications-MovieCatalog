@@ -259,6 +259,18 @@ div#buttons {
     margin-top: 10px;
 }
 
+.check-box{
+    display: inline-block;
+    width: 35px;
+}
+
+.slider-filter{
+    display: inline-block;
+    border: none;
+    width: 36px;
+    text-align: right;
+}
+
 /*	Products List	*/
 
 .all-products h3 {
