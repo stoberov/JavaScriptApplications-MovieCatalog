@@ -18,9 +18,8 @@ On clicking Details for a movie, an enlarged view of the movies is presented. Th
 
 Team Members:
 -------------
- - Дилян Трайков - **dilyantraykov**
- - Иван Иванов - **zdzdz**
- - Любомир Нанев - **Mask_ln**
- - Стоян Беров - **stoberov**
- - Иван Китановски - **ivannk0900**
-
+ - Р”РёР»СЏРЅ РўСЂР°Р№РєРѕРІ - **dilyantraykov**
+ - РРІР°РЅ РРІР°РЅРѕРІ - **zdzdz**
+ - Р›СЋР±РѕРјРёСЂ РќР°РЅРµРІ - **Mask_ln**
+ - РЎС‚РѕСЏРЅ Р‘РµСЂРѕРІ - **stoberov**
+ - РРІР°РЅ РљРёС‚Р°РЅРѕРІСЃРєРё - **ivannk0900**
