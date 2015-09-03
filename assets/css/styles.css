@@ -252,15 +252,16 @@ div#buttons {
     margin-top: 10px;
 }
 
-#year-box{
+.check-box{
     display: inline-block;
     width: 35px;
 }
 
-#slider-year{
+.slider-filter{
     display: inline-block;
     border: none;
-    width: 40px
+    width: 36px;
+    text-align: right;
 }
 
 /*	Products List	*/

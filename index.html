@@ -171,17 +171,18 @@
 
                 <div class="filter-criteria">
                     <span>Year After</span>
-                    <input type="checkbox" class="year" id="year-box" name="year" value="2000">
-                    <input type="text" class="year" id="slider-year" value="2000" readonly>
+                    <input type="checkbox" class="year check-box"  name="year" value="1950">
+                    <input type="text" class="year slider-filter" value="1950" readonly>
 
                     <div id="slider" style="width: 170px"></div>
                 </div>
 
                 <div class="filter-criteria">
                     <span>Duration Longer Than</span>
-                    <label><input type="checkbox" value="60" name="duration"> 60 minutes</label>
-                    <label><input type="checkbox" value="90" name="duration"> 90 minutes</label>
-                    <label><input type="checkbox" value="120" name="duration"> 120 minutes</label>
+                    <input type="checkbox" class="duration check-box" name="duration" value="90">
+                    <input type="text" class="duration slider-filter" value="90" readonly> min
+
+                    <div id="slider-duration" style="width: 170px"></div>
                 </div>
 
                 <button>Clear filters</button>
@@ -249,5 +250,6 @@
 <script src="assets/js/addingMovies.js"></script>
 <script src="assets/js/currencyExchange.js"></script>
 <script src="assets/js/filtering-year-slider.js"></script>
+<script src="assets/js/filtering-duration-slider.js"></script>
 </body>
 </html>
