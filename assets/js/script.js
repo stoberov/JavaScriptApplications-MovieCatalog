@@ -1,15 +1,14 @@
 $(function () {
 
     var products = [],
-        filters = {};
-
-    var checkboxes = $('.all-products input[type=checkbox]');
+        filters = {},
+        singleProductPage,
+        checkboxes = $('.all-products input[type=checkbox]');
 
     checkboxes.click(function () {
 
         var that = $(this),
             specName = that.attr('name');
-
 
         if (that.is(":checked")) {
             if (!(filters[specName] && filters[specName].length)) {
@@ -21,13 +20,10 @@ $(function () {
         }
 
         if (!that.is(":checked")) {
-
             if (filters[specName] && filters[specName].length && (filters[specName].indexOf(that.val()) != -1)) {
-
                 var index = filters[specName].indexOf(that.val());
 
                 filters[specName].splice(index, 1);
-
                 if (!filters[specName].length) {
                     delete filters[specName];
                 }
@@ -41,21 +37,15 @@ $(function () {
         window.location.hash = '#';
     });
 
-
-    var singleProductPage = $('.single-product');
-
+    singleProductPage = $('.single-product');
     singleProductPage.on('click', function (e) {
 
         if (singleProductPage.hasClass('visible')) {
-
             var clicked = $(e.target);
-
             if (clicked.hasClass('close') || clicked.hasClass('overlay')) {
                 createQueryHash(filters);
             }
-
         }
-
     });
 
     $.getJSON("products.json", function (data) {
@@ -71,11 +61,12 @@ $(function () {
     // Navigation
 
     function render(url) {
-        var temp = url.split('/')[0];
+        var temp = url.split('/')[0],
+            map;
 
         $('.main-content .page').removeClass('visible');
 
-        var map = {
+        map = {
             '': function () {
 
                 filters = {};
@@ -83,11 +74,13 @@ $(function () {
 
                 renderProductsPage(products);
             },
+
             '#product': function () {
                 var index = url.split('#product/')[1].trim();
 
                 renderSingleProductPage(index, products);
             },
+
             '#filter': function () {
                 url = url.split('#filter/')[1].trim();
                 try {
@@ -97,31 +90,26 @@ $(function () {
                     window.location.hash = '#';
                     return;
                 }
-
                 renderFilterResults(filters, products);
             }
-
         };
 
         if (map[temp]) {
             map[temp]();
-        }
-        else {
+        } else {
             renderErrorPage();
         }
-
     }
 
     function generateAllProductsHTML(data) {
 
-        var list = $('.all-products .products-list');
+        var list = $('.all-products .products-list'),
+            theTemplateScript = $("#products-template").html(),
+            theTemplate = Handlebars.compile(theTemplateScript);
 
-        var theTemplateScript = $("#products-template").html();
-        var theTemplate = Handlebars.compile(theTemplateScript);
         list.append(theTemplate(data));
         list.find('li > button').on('click', function (e) {
             e.preventDefault();
-
             var productIndex = $(this).parent().data('index');
 
             window.location.hash = 'product/' + productIndex;
@@ -129,12 +117,11 @@ $(function () {
     }
 
     function renderProductsPage(data) {
-
         var page = $('.all-products'),
             allProducts = $('.all-products .products-list > li');
+
         allProducts.addClass('hidden');
         allProducts.each(function () {
-
             var that = $(this);
 
             data.forEach(function (item) {
@@ -143,12 +130,10 @@ $(function () {
                 }
             });
         });
-
         page.addClass('visible');
     }
 
     function renderSingleProductPage(index, data) {
-
         var page = $('.single-product'),
             container = $('.preview-large');
 
@@ -165,11 +150,9 @@ $(function () {
                     $("meta[property='og:title']").attr("content", 'I"m viewing the movie ' + item.title + ' @ The White Lady');
                     $("meta[property='og:description']").attr("content", item.summary);
                 }
-
             });
         }
         page.addClass('visible');
-
     }
 
     function renderFilterResults(filters, products) {
@@ -178,7 +161,6 @@ $(function () {
             isFiltered = false;
 
         checkboxes.prop('checked', false);
-
         criteria.forEach(function (c) {
             if (filters[c] && filters[c].length) {
                 if (isFiltered) {
@@ -222,7 +204,6 @@ $(function () {
                     }
                 });
             }
-
         });
         renderProductsPage(results);
     }
@@ -238,6 +219,5 @@ $(function () {
         } else {
             window.location.hash = '#';
         }
-
     }
 });
