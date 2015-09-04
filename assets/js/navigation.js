@@ -49,11 +49,30 @@ var navigation = (function() {
     });
 
     function getProducts() {
-        $.getJSON("products.json", function(data) {
-            products = data;
-            generateAllProductsHTML(products);
-            $(window).trigger('hashchange');
-        });
+        var el = new Everlive('aHvavzXSbq2nV39K');
+        var productsData = el.data('Products');
+        products = [];
+
+        productsData.get()
+            .then(function(data) {
+                data.result.forEach(function(item) {
+                    products.push({
+                        "id": item.Id,
+                        "title": item.Title,
+                        "summary": item.Summary,
+                        "duration": item.Duration,
+                        "country": item.Country,
+                        "year": item.Year,
+                        "price": item.Price,
+                        "genre": item.Genre,
+                        "small": item.ImageUrlSmall,
+                        "large": item.ImageUrlBig
+                    });
+                })
+
+                generateAllProductsHTML(products);
+                $(window).trigger('hashchange');
+            });
     }
 
     $(window).on('hashchange', function() {
@@ -141,13 +160,13 @@ var navigation = (function() {
         if (data.length) {
             data.forEach(function(item) {
                 if (item.id == index) {
-                    container.find('h3').text(item.name);
-                    container.find('img').attr('src', item.image.large);
+                    container.find('h3').text(item.title);
+                    container.find('img').attr('src', item.large);
                     container.find('p').text(item.summary);
 
                     $(".fb-share-button").attr("data-href", 'http://localhost/index.html#product/' + index);
                     $("meta[property='og:url']").attr("content", 'http://localhost/index.html#product/' + index);
-                    $("meta[property='og:image']").attr("content", item.image.large);
+                    $("meta[property='og:image']").attr("content", item.large);
                     $("meta[property='og:title']").attr("content", 'I"m viewing the movie ' + item.title + ' @ The White Lady');
                     $("meta[property='og:description']").attr("content", item.summary);
                 }
@@ -171,29 +190,29 @@ var navigation = (function() {
 
                 filters[c].forEach(function(filter) {
                     products.forEach(function(item) {
-                        if (typeof item.specs[c] == 'number') {
-                            if (item.specs[c] == filter) {
+                        if (typeof item[c] == 'number') {
+                            if (item[c] == filter) {
                                 results.push(item);
                                 isFiltered = true;
                             }
                         }
 
-                        if (typeof item.specs[c] == 'string') {
-                            if (item.specs[c].toLowerCase().indexOf(filter) != -1) {
+                        if (typeof item[c] == 'string') {
+                            if (item[c].toLowerCase().indexOf(filter) != -1) {
                                 results.push(item);
                                 isFiltered = true;
                             }
                         }
 
                         if (c == 'duration') {
-                            if (item.specs[c] > filter) {
+                            if (item[c] > filter) {
                                 results.push(item);
                                 isFiltered = true;
                             }
                         }
 
                         if (c == 'year') {
-                            if (item.specs[c] > filter) {
+                            if (item[c] > filter) {
                                 results.push(item);
                                 isFiltered = true;
                             }
@@ -223,7 +242,9 @@ var navigation = (function() {
     }
 
     return {
+        products: products,
         getProducts: getProducts,
-        generateAllProductsHTML: generateAllProductsHTML
+        generateAllProductsHTML: generateAllProductsHTML,
+        renderProductsPage: renderProductsPage
     }
 })();
