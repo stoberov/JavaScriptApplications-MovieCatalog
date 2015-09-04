@@ -8,7 +8,7 @@ The main purpose of the application is to allow users to keep track of their mov
 
 ----------
 
-The site is made responsive with **Twitter Bootstrap**, whereas, the grid view is handled by **Handlebars**. The main HTML file contains the code for a Main Page, a Single Movie page and an Error page, which are rendered with **jQuery** and routes managed via **hashchange**. The exchange rates for the prices are pulled via the **Rate Exchange API**, and the current currency is kept in **localStorage**. The site is made more user-friendly via **jQueryUI**.
+The site is made responsive with **Twitter Bootstrap**, whereas, the grid view is handled by **Handlebars**. The main HTML file contains the code for a Main Page, a Single Movie page and an Error page, which are rendered with **jQuery** and routes managed via **hashchange**. The exchange rates for the prices are pulled via the **Rate Exchange API**, and the current currency is kept in **localStorage**. The site is made more user-friendly via **jQueryUI**, and unit tests with **Mocha** and **Chai** ensure the application runs correctly.
 
 On clicking the Add Movie button, the user can add new movies which are handled via T**elerik Backend Services**. 
 
