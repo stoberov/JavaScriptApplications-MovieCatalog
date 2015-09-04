@@ -60,10 +60,10 @@ var navigation = (function() {
                         "id": item.Id,
                         "title": item.Title,
                         "summary": item.Summary,
-                        "duration": item.Duration,
+                        "duration": +item.Duration,
                         "country": item.Country,
-                        "year": item.Year,
-                        "price": item.Price,
+                        "year": +item.Year,
+                        "price": +item.Price,
                         "genre": item.Genre,
                         "small": item.ImageUrlSmall,
                         "large": item.ImageUrlBig
